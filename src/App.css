@@ -1,38 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+
+:root {
+  --primary-color: #1eb2a6;
+  --appColor: #3c3f45;
+}
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: default;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+  scroll-snap-align: start;
+  scroll-snap-type: y proximity;
+  background-color: hwb(0deg 95% 3%) !important;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 6rem;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+#home {
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-img-home{
+  background-image: url("https://scintillating-smakager-860376.netlify.app/static/media/bg.baa1024a4ae092566a75.webp");
+}
+
+.bg-img-courses{
+  background-image: url("https://scintillating-smakager-860376.netlify.app/static/media/back.93d3f802b480eeabae07.webp");
+}
+
+.social-link {
+  position: relative;
+  bottom: 4rem;
+}
+
+.social-link a {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.social-link a i {
+  color: var(--primary-color);
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  bottom: -0.9em;
+  left: -0.3em;
+  height: 3em;
+  width: 3em;
+  padding: 6px;
+}
+
+.social-link a:hover {
+  background-color: var(--primary-color);
+}
+
+.social-link a:hover i {
+  color: #fff !important;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--primary-color) !important;
+}
+
+.bg-light:hover {
+  background-color: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+.bg-light:hover .content p {
+  color: #fff !important;
+}
+
+.bg-image {
+  background-image: url("https://scintillating-smakager-860376.netlify.app/static/media/awrapper.031ce77a398171427673.webp");
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+}
+
+.course-img {
+  background-color: #1eb2a6;
+  border-radius: 50%;
+  height: 87px;
+  padding: 15px;
+  width: 84px;
+  margin-top: 2rem;
+  padding-left: 0.5rem;
+}
+
+.course-price{
+  cursor: default !important;
+  padding: 0.5rem 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  border: none;
+  background-color: #f8f8f8
+}
+
+.intro-t img{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+.card-t{
+  cursor: pointer !important;
+}
+
+.card-t:hover{
+  background-color: var(--primary-color) !important;
+}
+
+.card-t:hover .intro-t h5{
+  color: white !important;
+}
+
+#form-mail{
+  width: 64%;
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+
+a{
+  text-decoration: none !important;
+  cursor: pointer;
 }
